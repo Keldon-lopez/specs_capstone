@@ -2,9 +2,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <header>
+    <footer>
       <p>Keldon's Capstone Footer</p>
-    </header>
+    </footer>
   );
 }
 
