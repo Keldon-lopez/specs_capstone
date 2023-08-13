@@ -2,17 +2,17 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
-// const {PORT} = process.env
+const {PORT} = process.env
 // const {register, login, logout} = require('./controllers/auth.js')
 // const {getAllPosts, getCurrentUserPosts, addPost, editPost, deletePost} = require('./controllers/posts.js')
 // const {isAuthenticated} = require('./middleware/isAuthenticated.js')
 
 const {sequelize} = require('./util/database')
-// const {User} = require('./models/user')
-// const {Post} = require('./models/post')
+const {Party_types} = require('./models/party_types')
+const {Party_ideas} = require('./models/party_ideas')
 
-// User.hasMany(Post)
-// Post.belongsTo(User)
+Party_types.hasMany(Party_ideas)
+Party_ideas.belongsTo(Party_types)
 
 app.use(express.static(`${__dirname}/server`))
 

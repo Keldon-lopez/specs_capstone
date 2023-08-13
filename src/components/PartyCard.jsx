@@ -13,6 +13,7 @@ function PartyCard(props) {
       <p>Party Name: {partyName} </p>
       <p>Party Type: {partyType} </p>
       <p>Recommended Attendees: {recommendedAttendees} </p>
+      <p>Entered Attendees: {}</p>
       <p>Event Description: {partyDescription} </p>
     </div>
   );
