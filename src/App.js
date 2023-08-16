@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MainDisplay from "./components/MainDisplay";
+import AddParty from "./components/AddParty";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<MainDisplay />} />
+        <Route path="/addParty" element={<AddParty />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
