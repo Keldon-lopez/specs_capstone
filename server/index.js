@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 const {PORT} = process.env
 // const {register, login, logout} = require('./controllers/auth.js')
-// const {getAllPosts, getCurrentUserPosts, addPost, editPost, deletePost} = require('./controllers/posts.js')
+const {getAllPartyIdeas} = require('./controllers/parties.js')
 // const {isAuthenticated} = require('./middleware/isAuthenticated.js')
 
 const {sequelize} = require('./util/database')
@@ -27,8 +27,8 @@ app.use(cors())
 // app.post('/register', register)
 // app.post('/login', login)
 
-// //Get all Posts
-// app.get('/posts', getAllPosts)
+//Get all Party_ideas
+app.get('/parties', getAllPartyIdeas)
 
 
 // //AUTH Post usage

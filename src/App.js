@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import { Routes, Route, Navigate } from 'react-router-dom'
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,7 +9,10 @@ function App() {
   return (
     <div className="App">
       < Header />
-      < MainDisplay />
+      <Routes>
+        <Route path='/' element={< MainDisplay />}/>
+        <Route path='*' element={<Navigate to='/'/>}/>
+      </Routes>
       < Footer />
       
     </div>

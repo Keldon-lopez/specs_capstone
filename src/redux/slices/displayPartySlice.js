@@ -5,10 +5,11 @@ export const displayPartySlice = createSlice({
   name: "displayParty",
   initialState: {
     value: {
-      partyName: "Filler Name",
-      partyType: "Filler Type",
-      recommendedAttendees: "Filler Attendees",
-      partyDescription: "Filler Description",
+      max_recommended_attendees: 0,
+      min_recommended_attendees: 0,
+      partyTypeId: 0,
+      party_description: "filler description",
+      party_idea_name: "filler name",
   },
   },
   reducers: {
