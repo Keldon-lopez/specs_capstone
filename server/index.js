@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 const {PORT} = process.env
 // const {register, login, logout} = require('./controllers/auth.js')
-const {getAllPartyIdeas} = require('./controllers/parties.js')
+const {getAllPartyIdeas, addPartyIdea} = require('./controllers/parties.js')
 // const {isAuthenticated} = require('./middleware/isAuthenticated.js')
 
 const {sequelize} = require('./util/database')
@@ -29,6 +29,9 @@ app.use(cors())
 
 //Get all Party_ideas
 app.get('/parties', getAllPartyIdeas)
+
+// Submit new Party Idea without AUTH
+app.post('/parties', addPartyIdea)
 
 
 // //AUTH Post usage

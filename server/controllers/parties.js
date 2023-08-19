@@ -12,6 +12,17 @@ module.exports = {
             res.sendStatus(400)
         }
     }, 
+    addPartyIdea: async (req, res) =>{
+        try {
+            let {party_idea_name, min_recommended_attendees, max_recommended_attendees, party_description, partyTypeId} = req.body;
+            await Party_ideas.create({party_idea_name, min_recommended_attendees, max_recommended_attendees, party_description, partyTypeId})
+            res.sendStatus(200)            
+        } catch (error) {
+            console.log("error in add party idea");
+            console.log(error)
+            res.status(400).send('cannot add party idea')
+        }
+    }, 
     // getCurrentUserPosts:async (req, res) => {
     //     try {
     //         const {userId} = req.params
@@ -27,17 +38,6 @@ module.exports = {
     //         console.log('ERROR IN getCurrentUserPosts')
     //         console.log(error)
     //         res.sendStatus(400)
-    //     }
-    // }, 
-    // addPost: async (req, res) =>{
-    //     try {
-    //         let {title, content, status, userId} = req.body;
-    //         await Post.create({title, content, privateStatus: status, userId})
-    //         res.sendStatus(200)            
-    //     } catch (error) {
-    //         console.log("error in add post");
-    //         console.log(error)
-    //         res.status(400).send('cannot add post')
     //     }
     // }, 
     // editPost: async (req, res) =>{
