@@ -4,13 +4,13 @@ import { createSlice } from "@reduxjs/toolkit";
 export const displayPartySlice = createSlice({
   name: "displayParty",
   initialState: {
-    value: {
+    value: [{
       max_recommended_attendees: 0,
       min_recommended_attendees: 0,
       partyTypeId: 0,
       party_description: "filler description",
       party_idea_name: "filler name",
-  },
+  }],
   },
   reducers: {
     setDisplayParty: (state, action) => {

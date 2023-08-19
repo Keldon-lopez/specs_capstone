@@ -4,8 +4,8 @@ import { selectDisplay } from "../redux/slices/displayPartySlice";
 
 function PartyCard(props) {
   let currentDisplay = useSelector(selectDisplay);
-  let {party_idea_name, partyTypeId, min_recommended_attendees, max_recommended_attendees, party_description} = currentDisplay;
-  console.log("current display",currentDisplay)
+  let randomParty = currentDisplay[(Math.floor(Math.random() * currentDisplay.length))]
+  let {party_idea_name, partyTypeId, min_recommended_attendees, max_recommended_attendees, party_description} = randomParty;
 
   let {attendees} = props;
   return (
