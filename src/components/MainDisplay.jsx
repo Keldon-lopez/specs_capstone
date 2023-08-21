@@ -26,13 +26,16 @@ function MainDisplay() {
   }
 
   const getPartyIdeas = useCallback(() => {
-    axios({
-      url: "http://localhost:4444/parties",
-      method: "GET",
-      params: { attendees: attendees },
-    }).then(res => {
-      setParties(res.data)}
-      ).catch(err => console.log(err));
+    if (attendees != '') {
+      axios({
+        url: "http://localhost:4444/parties",
+        method: "GET",
+        params: { attendees: attendees },
+      }).then(res => {
+        setParties(res.data)}
+        ).catch(err => console.log(err));
+      
+    }
 }, [attendees])
 
 useEffect(() => {
