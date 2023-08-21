@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import initialParty from "../../assets/initialParty";
 
 export const displayPartySlice = createSlice({
   name: "displayParty",

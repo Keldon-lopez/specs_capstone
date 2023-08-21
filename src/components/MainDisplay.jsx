@@ -5,7 +5,7 @@ import axios from 'axios';
 import { setDisplayParty } from "../redux/slices/displayPartySlice";
 
 import PartyCard from "./PartyCard";
-import Login from "./Auth";
+
 
 function MainDisplay() {
   const [attendees, setAttendees] = useState("");
@@ -39,7 +39,6 @@ useEffect(() => {
     <div>
       <p>Keldon's Capstone Main Display</p>
       <div>
-        <Login />
       </div>
       <form>
         <input type="number" name="attendeesAmount" onChange={e => placeholder = e.target.value }></input>
