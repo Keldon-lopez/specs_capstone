@@ -1,10 +1,19 @@
+const { Op } = require("sequelize");
+
 const { Party_ideas } = require("../models/party_ideas");
 const { Party_types } = require("../models/party_types");
 
 module.exports = {
     getAllPartyIdeas: async (req, res) =>{
+        let {attendees} = req.query
+
         try {
-            const parties = await Party_ideas.findAll()
+            const parties = await Party_ideas.findAll({
+                where:{
+                    min_recommended_attendees: {[Op.lte]: attendees},
+                    max_recommended_attendees: {[Op.gte]: attendees}
+                }
+            })
             res.status(200).send(parties)
         } catch (error) {
             console.log('ERROR IN getAllParties')

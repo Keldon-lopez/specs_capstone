@@ -16,19 +16,24 @@ function MainDisplay() {
 
   const shufflePartyHandler =(event) => {
     getPartyIdeas();
-    dispatch(setDisplayParty(parties))
-    setAttendees(placeholder);
-    setPartySubmitted(true);
+    if (parties.length === 0) {
+      console.log("No parties found for number of attendees, attendees enter", attendees)
+    } else {
+      dispatch(setDisplayParty(parties))
+      setPartySubmitted(true);
+    }
     event.preventDefault()
   }
 
-  let placeholder = "";
-
   const getPartyIdeas = useCallback(() => {
-    axios.get(`http://localhost:4444/parties`)
-        .then(res => setParties(res.data))
-        .catch(err => console.log(err));
-}, [])
+    axios({
+      url: "http://localhost:4444/parties",
+      method: "GET",
+      params: { attendees: attendees },
+    }).then(res => {
+      setParties(res.data)}
+      ).catch(err => console.log(err));
+}, [attendees])
 
 useEffect(() => {
   getPartyIdeas();
@@ -41,7 +46,7 @@ useEffect(() => {
       <div>
       </div>
       <form>
-        <input type="number" name="attendeesAmount" onChange={e => placeholder = e.target.value }></input>
+        <input type="number" name="attendeesAmount" onChange={e => setAttendees(e.target.value)}></input>
         <button onClick={shufflePartyHandler}>shuffle</button>
       </form>
       <div>{ partySubmitted && <PartyCard attendees={attendees} /> }</div>
