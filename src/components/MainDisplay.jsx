@@ -26,7 +26,7 @@ function MainDisplay() {
   }
 
   const getPartyIdeas = useCallback(() => {
-    if (attendees != '') {
+    if (attendees !== '') {
       axios({
         url: "http://localhost:4444/parties",
         method: "GET",
