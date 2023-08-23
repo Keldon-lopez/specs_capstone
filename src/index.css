@@ -1,3 +1,38 @@
-body {
-  background-color: lightblue;
+html {
+  background-image: linear-gradient(to bottom right,#F2CCC3 20%, #ffb5c3b7 30% 75%, #ACD8AA 80%, #0a790498 90%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
+button {
+  background-color: #F48498;
+  border-width: 5px;
+  color: black;
+  border-color: #ACD8AA;
+  border-radius: 10%;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+input{
+  background-color: #F48498;
+  
+  border-width: 5px;
+  color: black;
+  border-color: #ACD8AA;
+  border-radius: 10%;
+}
+
+/* 
+https://coolors.co/visualizer/f2ccc3-e78f8e-ffe6e8-acd8aa-f48498
+
+#F48498
+#ACD8AA
+#FFE6E8
+#E78F8E
+#F2CCC3
+*/

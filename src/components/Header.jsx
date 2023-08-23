@@ -21,7 +21,7 @@ function Header(props) {
       {validSession &&
       
       <nav>
-          <Link to="">
+          <Link to="/">
             <button className="NavButton">Home</button>
           </Link>
           <Link to="/addParty">
@@ -30,7 +30,9 @@ function Header(props) {
           {/* <Link to="/newRecipe"> */}
           <button className="NavButton">Profile</button>
           {/* </Link> */}
+          <Link to= "/">
           <button className="NavButton" onClick={signOutHandler}>Logout</button>
+          </Link>
       </nav>
       }
     </header>
