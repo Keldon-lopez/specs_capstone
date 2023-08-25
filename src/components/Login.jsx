@@ -25,7 +25,27 @@ function Login() {
   }, []);
 
   if (!session) {
-    return <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />;
+    return <div className="login">
+      <div className="loginForm">
+        <Auth  
+        supabaseClient={supabase} 
+        appearance={{ theme: ThemeSupa,
+          variables: {
+            default: {
+              colors: {
+                inputBorder: '#F48498',
+                inputBorderHover: 'black',
+                inputBorderFocus: 'black',
+                inputText: 'black',
+                inputLabelText: 'black',
+                inputPlaceholder: '#808080'
+              },
+            },
+          }, }} 
+        
+        providers={['github']} />
+        </div>
+      </div>;
   } else {
 	dispatch(setUserSession(session));
     return <div>Logged in!</div>;

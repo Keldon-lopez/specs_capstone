@@ -44,16 +44,17 @@ useEffect(() => {
 
 
   return (
-    <div>
-      <p>Keldon's Capstone Main Display</p>
+    <main className="mainDisplay">
+      <h2>Let's Shuffle Into a New Party!</h2>
       <div>
       </div>
-      <form>
+      <form className="shuffleForm">
+        <label for="attendeesAmount">Enter Number Of Guests</label>
         <input type="number" name="attendeesAmount" onChange={e => setAttendees(e.target.value)}></input>
-        <button onClick={shufflePartyHandler}>shuffle</button>
+        <button className="shuffleBtn" onClick={shufflePartyHandler} placeholder="Enter Guests">shuffle</button>
       </form>
       <div>{ partySubmitted && <PartyCard attendees={attendees} /> }</div>
-    </div>
+    </main>
   );
 }
 

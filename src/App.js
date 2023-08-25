@@ -21,7 +21,7 @@ function App() {
         <Route path="/addParty" element={<AddParty />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-      <Footer />
+      {value && <Footer />}
     </div>
   );
 }

@@ -38,7 +38,7 @@ const AddParty = () => {
   };
 
   return (
-    <main>
+    <main className="addParty">
       <form className="add-party-form" onSubmit={handleSubmit}>
         <input
           type="text"

@@ -1,5 +1,11 @@
 html {
-  background-image: linear-gradient(to bottom right,#F2CCC3 20%, #ffb5c3b7 30% 75%, #ACD8AA 80%, #0a790498 90%);
+  background-image: linear-gradient(
+    to bottom right,
+    #f2ccc3 20%,
+    #ffb5c3b7 30% 75%,
+    #acd8aa 80%,
+    #0a790498 90%
+  );
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,11 +14,11 @@ html {
   height: 100%;
 }
 button {
-  background-color: #F48498;
-  border-width: 5px 0 0 5px;
+  background-color: #f48498;
   color: black;
-  border-color: #ACD8AA;
-  border-radius: 10%;
+  border-width: 5px 0 0 5px;
+  border-color: #acd8aa;
+  border-radius: 10px 0 0 0;
   padding: 7px;
 }
 button:hover {
@@ -20,29 +26,77 @@ button:hover {
   border-width: 5px 0 0 5px;
   color: black;
   border-color: #70d16b;
-  border-radius: 10%;
+  border-radius: 10px 0 0 0;
   cursor: pointer;
 }
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   width: 250px;
 }
-input{
-  background-color: #F48498;
-  
+.NavButton {
+  font-family: "Rampart One", cursive;
+  font-weight: 700;
+}
+.shuffleForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  padding: 10px;
+  height: 150px;
+}
+.shuffleBtn {
+  font-size: 15px;
+  font-family: "Bagel Fat One", cursive;
+}
+input {
+  background-color: #f48498;
+  border-width: 5px;
+  border-style: solid;
+  color: black;
+  border-color: #acd8aa;
+  border-radius: 10px;
+  text-align: center;
+}
+input:hover {
+  background-color: #f75371;
   border-width: 5px;
   color: black;
-  border-color: #ACD8AA;
-  border-radius: 10%;
+  border-color: #70d16b;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .header {
   display: flex;
   justify-content: space-between;
   padding: 60px;
 }
-h2{
+h1 {
   font-size: 34px;
+  font-family: "Bagel Fat One", cursive;
+  color: #70d16b;
+  border-color: #f48498;
+}
+h2 {
+  font-size: 25px;
+  font-family: "Bagel Fat One", cursive;
+  color: #70d16b;
+  border-color: #f48498;
+}
+.login {
+  display: flex;
+  justify-content: center;
+}
+.loginForm {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #acd8aa;
+}
+main {
+  height: 70vh;
 }
 
 /* 

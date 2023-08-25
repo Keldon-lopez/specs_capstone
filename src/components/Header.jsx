@@ -17,7 +17,7 @@ function Header(props) {
 
   return (
     <header className="header">
-      <h2>Party Shuffle</h2>
+      <h1>Party Shuffle</h1>
       {validSession &&
       
       <nav>

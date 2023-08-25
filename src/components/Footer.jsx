@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <p>Keldon's Capstone Footer</p>
+      <p>Thank you for using Party Shuffle! Enjoy the Party!</p>
     </footer>
   );
 }
