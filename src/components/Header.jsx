@@ -16,8 +16,8 @@ function Header(props) {
   }
 
   return (
-    <header>
-      <h2>Keldon's Capstone</h2>
+    <header className="header">
+      <h2>Party Shuffle</h2>
       {validSession &&
       
       <nav>
@@ -28,7 +28,7 @@ function Header(props) {
             <button className="NavButton">Add Party</button>
           </Link>
           {/* <Link to="/newRecipe"> */}
-          <button className="NavButton">Profile</button>
+          {/* <button className="NavButton">Profile</button> */}
           {/* </Link> */}
           <Link to= "/">
           <button className="NavButton" onClick={signOutHandler}>Logout</button>

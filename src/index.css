@@ -9,14 +9,24 @@ html {
 }
 button {
   background-color: #F48498;
-  border-width: 5px;
+  border-width: 5px 0 0 5px;
   color: black;
   border-color: #ACD8AA;
   border-radius: 10%;
+  padding: 7px;
+}
+button:hover {
+  background-color: #f75371;
+  border-width: 5px 0 0 5px;
+  color: black;
+  border-color: #70d16b;
+  border-radius: 10%;
+  cursor: pointer;
 }
 nav{
   display: flex;
   justify-content: space-between;
+  width: 250px;
 }
 input{
   background-color: #F48498;
@@ -25,6 +35,14 @@ input{
   color: black;
   border-color: #ACD8AA;
   border-radius: 10%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+}
+h2{
+  font-size: 34px;
 }
 
 /* 
