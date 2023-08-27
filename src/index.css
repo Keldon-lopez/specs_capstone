@@ -98,35 +98,52 @@ h2 {
 main {
   height: 70vh;
 }
-.addParty{
+.partyCardParentContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+.partyCardContainer {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #acd8aa;
+  width: 450px;
+}
+.partCardItem{
+  margin: 5px;
+}
+.addParty {
   display: flex;
   flex-direction: column;
-	/* justify-content: space-evenly; */
+  /* justify-content: space-evenly; */
   align-items: center;
 }
-.form-input{
+.form-input {
   margin: 5px;
   padding: 5px;
 }
-.add-party-form{
+.add-party-form {
   display: flex;
   flex-direction: column;
-	justify-content: space-evenly;
+  justify-content: space-evenly;
   align-items: center;
 }
-.attendeesInputParent{
+.attendeesInputParent {
   width: 250px;
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
 }
-.attendeesInput{
+.attendeesInput {
   width: 100px;
 }
-.addPartyTextArea{
+.addPartyTextArea {
   resize: none;
   height: 150px;
   width: 300px;
@@ -138,7 +155,7 @@ main {
   border-color: #acd8aa;
   border-radius: 10px;
 }
-.addPartyTextArea:hover{
+.addPartyTextArea:hover {
   background-color: #f75371;
   border-width: 5px;
   color: black;

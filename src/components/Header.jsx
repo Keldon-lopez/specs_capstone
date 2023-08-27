@@ -18,7 +18,7 @@ function Header(props) {
   return (
     <header className="header">
       <Link to="/">
-      <h1>Party Shuffle</h1>
+      <h1>🍉Party Shuffle</h1>
       </Link>
       {validSession &&
       

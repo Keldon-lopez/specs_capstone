@@ -9,14 +9,17 @@ function PartyCard(props) {
 
   let {attendees} = props;
   return (
-    <div>
-      <p>Keldon's PartyCard </p>
-      <p>Party Name: {party_idea_name} </p>
-      <p>Party Type: {partyTypeId} </p>
-      <p>Entered Attendees: {attendees}</p>
-      <p>Minimum Recommended Attendees: {min_recommended_attendees} </p>
-      <p>Maximum Recommended Attendees: {max_recommended_attendees} </p>
-      <p>Event Description: {party_description} </p>
+    <div className="partyCardParentContainer">
+      <div className="partyCardContainer">
+      <p className="partCardItem">You've entered {attendees} guests, We recommend this party!</p>
+      <br/>
+      <p className="partCardItem">Party Name: <br/>{party_idea_name} </p>
+      {/* <p>Party Type: {partyTypeId} </p> */}
+      <br/>
+      <p className="partCardItem">We Recommend {min_recommended_attendees} To {max_recommended_attendees} Guest(s).</p>
+      <br/>
+      <p className="partCardItem">Event Description: <br/>{party_description} </p>
+      </div>
     </div>
   );
 }
