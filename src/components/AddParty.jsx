@@ -45,7 +45,7 @@ const AddParty = () => {
           placeholder="Party Idea Name"
           value={partyIdeaName}
           onChange={(e) => setPartyIdeaName(e.target.value)}
-          className="form-input"
+          className="form-input themeInput"
         />
         <br />
         <textarea
@@ -53,26 +53,30 @@ const AddParty = () => {
           placeholder="Party Description"
           value={partyDescription}
           onChange={(e) => setPartyDescription(e.target.value)}
-          className="form-input textarea"
+          className="form-input addPartyTextArea"
         />
         <br />
+        <p>Enter The Recommended Amount Of Attendees</p>
+        <div className="attendeesInputParent">
         <input
           type="number"
-          placeholder="minRecommendedAttendees"
+          placeholder="Minimum"
           value={minRecommendedAttendees}
           onChange={(e) => setMinRecommendedAttendees(e.target.value)}
-          className="form-input"
+          className="form-input themeInput attendeesInput"
         />
         <br />
         <input
           type="number"
-          placeholder="maxRecommendedAttendees"
+          placeholder="Maximum"
           value={maxRecommendedAttendees}
           onChange={(e) => setMaxRecommendedAttendees(e.target.value)}
-          className="form-input"
+          className="form-input themeInput attendeesInput"
         />
+        </div>
         <br />
-        <select onChange={(e) => setPartyTypeId(e.target.value)}>
+        <p>Enter Type of Party</p>
+        <select className="form-input themeInput" onChange={(e) => setPartyTypeId(e.target.value)}>
           <option value="0">Dance Party</option>
           <option value="1">Murder Mystery</option>
           <option value="2">Dungeon & Dragons</option>
@@ -80,7 +84,7 @@ const AddParty = () => {
           <option value="4">Generic Party</option>
         </select>
         <br />
-        <button className="form-btn">submit</button>
+        <button className="form-btn themeBtn">submit</button>
       </form>
     </main>
   );

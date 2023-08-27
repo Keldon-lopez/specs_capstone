@@ -21,7 +21,7 @@ button {
   border-radius: 10px 0 0 0;
   padding: 7px;
 }
-button:hover {
+.themeBtn:hover {
   background-color: #f75371;
   border-width: 5px 0 0 5px;
   color: black;
@@ -52,7 +52,7 @@ nav {
   font-size: 15px;
   font-family: "Bagel Fat One", cursive;
 }
-input {
+.themeInput {
   background-color: #f48498;
   border-width: 5px;
   border-style: solid;
@@ -61,7 +61,7 @@ input {
   border-radius: 10px;
   text-align: center;
 }
-input:hover {
+.themeInput:hover {
   background-color: #f75371;
   border-width: 5px;
   color: black;
@@ -98,7 +98,63 @@ h2 {
 main {
   height: 70vh;
 }
-
+.addParty{
+  display: flex;
+  flex-direction: column;
+	/* justify-content: space-evenly; */
+  align-items: center;
+}
+.form-input{
+  margin: 5px;
+  padding: 5px;
+}
+.add-party-form{
+  display: flex;
+  flex-direction: column;
+	justify-content: space-evenly;
+  align-items: center;
+}
+.attendeesInputParent{
+  width: 250px;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+.attendeesInput{
+  width: 100px;
+}
+.addPartyTextArea{
+  resize: none;
+  height: 150px;
+  width: 300px;
+  text-align: start;
+  background-color: #f48498;
+  border-width: 5px;
+  border-style: solid;
+  color: black;
+  border-color: #acd8aa;
+  border-radius: 10px;
+}
+.addPartyTextArea:hover{
+  background-color: #f75371;
+  border-width: 5px;
+  color: black;
+  border-color: #70d16b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
 /* 
 https://coolors.co/visualizer/f2ccc3-e78f8e-ffe6e8-acd8aa-f48498
 

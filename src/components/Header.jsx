@@ -17,21 +17,23 @@ function Header(props) {
 
   return (
     <header className="header">
+      <Link to="/">
       <h1>Party Shuffle</h1>
+      </Link>
       {validSession &&
       
       <nav>
           <Link to="/">
-            <button className="NavButton">Home</button>
+            <button className="NavButton themeBtn">Home</button>
           </Link>
           <Link to="/addParty">
-            <button className="NavButton">Add Party</button>
+            <button className="NavButton themeBtn">Add Party</button>
           </Link>
           {/* <Link to="/newRecipe"> */}
           {/* <button className="NavButton">Profile</button> */}
           {/* </Link> */}
           <Link to= "/">
-          <button className="NavButton" onClick={signOutHandler}>Logout</button>
+          <button className="NavButton themeBtn" onClick={signOutHandler}>Logout</button>
           </Link>
       </nav>
       }

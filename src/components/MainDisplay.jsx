@@ -50,8 +50,8 @@ useEffect(() => {
       </div>
       <form className="shuffleForm">
         <label for="attendeesAmount">Enter Number Of Guests</label>
-        <input type="number" name="attendeesAmount" onChange={e => setAttendees(e.target.value)}></input>
-        <button className="shuffleBtn" onClick={shufflePartyHandler} placeholder="Enter Guests">shuffle</button>
+        <input className="themeInput" type="number" name="attendeesAmount" onChange={e => setAttendees(e.target.value)}></input>
+        <button className="shuffleBtn themeBtn" onClick={shufflePartyHandler} placeholder="Enter Guests">shuffle</button>
       </form>
       <div>{ partySubmitted && <PartyCard attendees={attendees} /> }</div>
     </main>
